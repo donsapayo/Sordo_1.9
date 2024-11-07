@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--fondo-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="857dp"
+        android:src="@drawable/fondo2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <!--boton producir-->
+
+    <ImageView
+        android:id="@+id/producir"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/reproducir"
+        android:onClick="PlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--boton detener-->
+    <ImageView
+        android:id="@+id/detener"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/detener"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="stop"/>
+
+
+
+    <!--boton siguiente-->
+    <ImageView
+        android:id="@+id/siguiente"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/siguiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="elotro"/>
+
+    <!--boton anterior-->
+
+    <ImageView
+        android:id="@+id/anterior"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/anterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="volver"/>
+
+
+    <!--texto "Rolas"-->
+    <TextView
+        android:layout_width="99dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="190dp"
+        android:text=" Rolas"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="424dp"
+        android:layout_height="490dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!--cuadro de datos-->
+        <LinearLayout
+            android:layout_width="424dp"
+            android:layout_height="520dp"
+
+            android:orientation="vertical">
+
+            <!--confirmar el cuadro-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 1° lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="#"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="Titulo"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                </TableRow>
+
+                <!--2° lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="1"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/pesadilla"
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/hermosapesadilla"
+                        android:onClick="music1"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="Beatiful Nightmare"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+
+                </TableRow>
+                <!--2° lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="2"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:id="@+id/dartodo"
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/loditodo"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="Gave it all"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+                <!--3°lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="3"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:id="@+id/yesterday"
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/ayer"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="Yesterday"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+                <!--4° lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="4"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/deseo"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="Desire-Gryffin Remix"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+                <!--5°lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="5"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/nosoyyo"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="The Lost Soul Down-Slowee"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+                <!--6°lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="6"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/manananuncallegue"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="Tomorrow Never Comes"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+                <!--7°lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="7"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/nosereyo"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="ItAin´tMe(with Selena Gome"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+                <!--8°lista-->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="8"
+                        android:textColor="#808080"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/caminando"
+                        />
+                    <TextView
+                        android:layout_width="270dp"
+                        android:layout_height="55dp"
+                        android:padding="10dp"
+                        android:text="Caminando-R3HAB Remix"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/puntitos"
+                        />
+                </TableRow>
+
+
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

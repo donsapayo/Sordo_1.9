@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:text="Albumnes"
+        android:textColor="#EAF2EC"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--para bajar-->
+    <ScrollView
+        android:layout_width="390dp"
+        android:layout_height="680dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!--crear una abitacion para poner datos-->
+        <LinearLayout
+            android:layout_width="372dp"
+            android:layout_height="724dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--album de sofia-->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="151dp"
+                android:layout_height="162dp"
+                app:srcCompat="@drawable/conejo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="monospace"
+                android:text="musiquita"
+                android:textColor="#EAF2EC"
+                android:textSize="20sp" />
+
+            <!--para tener espacio-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="#EAF2EC"
+                android:fontFamily="monospace"/>
+
+            <!--album de palta-->
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="152dp"
+                android:layout_height="159dp"
+                app:srcCompat="@drawable/marcelo"
+                android:onClick="onClickPalta"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Rolas bien roladas"
+                android:textSize="20sp"
+                android:textColor="#EAF2EC"
+                android:fontFamily="monospace"/>
+            <!--otro espacio-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="#EAF2EC"
+                android:fontFamily="monospace"/>
+            <!--tienda-->
+            <ImageView
+                android:id="@+id/tienda"
+                android:layout_width="152dp"
+                android:layout_height="159dp"
+                app:srcCompat="@drawable/disco"
+                android:onClick="onClickMapa"/>
+            <!--texto de la tienda-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nuestra tienda"
+                android:textSize="20sp"
+                android:textColor="#EAF2EC"
+                android:fontFamily="monospace"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
